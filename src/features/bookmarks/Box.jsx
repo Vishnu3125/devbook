@@ -65,10 +65,12 @@ function Box(props) {
                 <div className="modal-content-parent-div">
                     {
                         modalIsOpen && props.subject[1].map((value, index) => (
-                            <a href={props.subject[2][index]}><div className="modal-content-div">
+                            <a href={props.subject[2][index]}>
+                                <div className="modal-content-div">
                                 <p className="modal-content-title">{value}</p>
                                 <p className="modal-content-desc">{props.subject[3][index]}</p>
-                            </div></a>
+                                </div>
+                            </a>
                         )
                     )}
                 </div>

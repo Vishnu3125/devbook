@@ -5,6 +5,14 @@
     --ws1: #dbdbdb;
     --ws2: #cccccc;
     --ws3: #afafaf;
+    --gr1: -webkit-linear-gradient(#F09819 1%, #FF512F  100%);
+    --grl1: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    /* --gr1: -webkit-linear-gradient(#02AAB0 1%, #04e4be  100%);
+    --grl1: linear-gradient(to right, #02AAB0 0%, #04e4be  51%, #02AAB0  100%); */
+    /* --gr1: -webkit-linear-gradient(#DA22FF 0%, #9733EE  100%);
+    --grl1: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%); */
+    /* --gr1: -webkit-linear-gradient(#FDFC47 0%, #24FE41  100%);
+    --grl1: linear-gradient(to right,#24FE41  0%, #bbbb00  51%, #24FE41  100%); */
   }
 
 /* scrollbar styling */
@@ -20,13 +28,21 @@
     /* border-bottom: 2px solid var(--bs2); */
 }
 
+.header-colour-div-button{
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    position: absolute;
+    border-radius: 25px;
+}
+
 .header-title{
     /* margin-left: 1.5rem; */
     margin-top: 1.5rem;
     font-size: 3rem;
     font-weight: 600;
     color: var(--ws2);
-    background: -webkit-linear-gradient(#F09819  1%, #FF512F  100%);
+    background: var(--gr1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -95,7 +111,7 @@ select:focus{
     color: var(--ws1);
     border: unset;
     border-radius: 25px;
-    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%)
+    background-image: var(--grl1)
 }
 
 .search-bar-button:hover {
@@ -147,7 +163,7 @@ select:focus{
     color:var(--ws2);
     font-size:1.2rem;
     font-weight: 600;
-    background: -webkit-linear-gradient(#F09819  1%, #FF512F  100%);
+    background: var(--gr1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -174,7 +190,7 @@ select:focus{
     font-size: 1.2rem;
     text-align: center;
     color: var(--ws2);
-    background: -webkit-linear-gradient(#F09819  1%, #FF512F  100%);
+    background: var(--gr1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -199,7 +215,7 @@ select:focus{
     margin: 7px;
     font-size: 1.1rem;
     font-weight: 700;
-    background: -webkit-linear-gradient(#F09819  1%, #FF512F  100%);
+    background: var(--gr1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -227,3 +243,24 @@ a:link{
 .ReactModal__Overlay--before-close{
     opacity: 0;
 }
+
+
+.btn-grad {background-image: linear-gradient(to right, #FDFC47 0%, #24FE41  51%, #FDFC47  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
