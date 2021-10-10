@@ -34,8 +34,8 @@ function Searchbar() {
                     <option value = "Github"> Github </option>  
                     {/* <option value = "Skoda"> Skoda </option>   */}
                 </select>
-            <br />
-            <input type="submit" value="Let's Go" className="search-bar-button" onClick={search}/>
+            <br/>
+            <input type="submit" value="Go" className="search-bar-button" onClick={search}/>
             </div>
         </div>
     )

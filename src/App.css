@@ -1,30 +1,39 @@
 :root {
     --bs1: #141414;
     --bs2: #222222;
-    --ws1: #f0f0f0;
-    --ws2: #dadada;
+    --bs3: #333333;
+    --ws1: #dbdbdb;
+    --ws2: #cccccc;
+    --ws3: #afafaf;
   }
+
+/* scrollbar styling */
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {background: #888;}
+::-webkit-scrollbar-thumb {background: #bebebe; }
+::-webkit-scrollbar-thumb:hover {background: #555;}
 
 .header-div{
     height: 2.5rem;
     width: auto;
-    border-bottom: 2px solid var(--bs2);
+    text-align: center;
+    /* border-bottom: 2px solid var(--bs2); */
 }
 
 .header-title{
-    margin-left: 1.5rem;
-    margin-top: .8rem;
-    font-size: 1.5rem;
+    /* margin-left: 1.5rem; */
+    margin-top: 1.5rem;
+    font-size: 3rem;
     font-weight: 600;
     color: var(--ws2);
     background: -webkit-linear-gradient(#F09819  1%, #FF512F  100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 .search-bar-main-div{
     text-align: center;
+    border-bottom: 1px solid var(--bs2);
 }
 
 .search-bar-div{
@@ -35,7 +44,7 @@
     position: relative;
     height: 1.2rem;
     top: 70px;
-    left: -310px;
+    left: -305px;
 }
 
 .search-bar{
@@ -50,7 +59,14 @@
     border: unset;
 }
 
+.search-bar:focus{
+    outline: unset;
+}
+
+
 select{
+    position: relative;
+    top: 0.5px;
     background-color: var(--bs2);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -62,9 +78,15 @@ select{
     font-size: 1rem;
 }
 
+
+select:focus{
+   outline: unset;
+}
+
 .search-bar-button{
     margin: 30px;
-    padding: 15px 45px;
+    margin-bottom: 50px;
+    padding: 15px 35px;
     text-align: center;
     font-size: 1rem;
     font-weight: 700;
@@ -87,4 +109,121 @@ select{
     background-image: linear-gradient(to right, #a7331c 0%, #aa6c15  51%, #a7331c  100%);
     color: #fff;
     text-decoration: none;
+}
+
+.bookmark-main-div{
+
+}
+
+.bookmark-content-div{
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px;
+    /* align-items: center; */
+}
+
+.box-main-div{
+    background-color: var(--bs2);
+    height: 150px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.box-main-div:hover{
+    background-color: var(--bs3);
+}
+
+.box-main-div:hover{
+    cursor: pointer;
+}
+
+.box-title-div{
+    text-align: center;
+    padding-top: 10px;
+    color:var(--ws2);
+    font-size:1.2rem;
+    font-weight: 600;
+    background: -webkit-linear-gradient(#F09819  1%, #FF512F  100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.box-desc-div{
+    text-indent: 1;
+    padding: 5px 15px;
+    color: var(--ws3);
+}
+
+.modal-close-button{
+    position:absolute;
+    right: 2%;
+    top: 1%;
+    color: var(--ws1);
+    font-size: 1.5rem;
+}
+
+.modal-close-button:hover{
+   cursor:pointer
+}
+
+.modal-title-div{
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--ws2);
+    background: -webkit-linear-gradient(#F09819  1%, #FF512F  100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal-content-parent-div{
+   
+}
+
+.modal-content-div{
+    background-color: var(--bs2);
+    margin: 10px;
+    padding: 7px 10px;
+    border-radius: 10px;
+}
+
+.modal-content-div:hover{
+    background-color: var(--bs3);
+}
+
+.modal-content-title{
+    color: var(--ws2);
+    margin: 7px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#F09819  1%, #FF512F  100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.modal-content-desc{
+    color: var(--ws3);
+    margin: 0 7px 7px;
+}
+
+
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
 }
